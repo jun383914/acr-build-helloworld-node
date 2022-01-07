@@ -46,12 +46,12 @@ stages:
        scriptType: 'bash'
        scriptLocation: 'inlineScript'
        inlineScript: |
-      jobs:
-      - job: build
-        displayName: 'Build image'
-        pool:
-          vmImage: ubuntu-latest
-        steps:
+  jobs:
+  - job: build
+    displayName: 'Build image'
+    pool:
+        vmImage: ubuntu-latest
+    steps:
         - task: AzureCLI@2
           displayName: 'Update ACR whitelist'
           inputs:
